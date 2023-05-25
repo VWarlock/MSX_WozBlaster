@@ -1,0 +1,97 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Thu May 17 16:14:43 2012
+#$ TITLE wozblaster.bls 
+#$ MODULE wozblaster
+#$ PINS 13 RD IORQ BUSDIR'o'  CS'o'  OA2'o'  OA1'o'  A7 A6 A5 A4 A3 A2 A1
+#$ NODES 6 N_19'o'  N_7'o'  N_8'o'  N_9'o'  N_10'o'  N_11'o' 
+
+.model wozblaster
+.inputs A6.BLIF A2.BLIF N_10.BLIF N_11.BLIF RD.BLIF CS.BLIF IORQ.BLIF N_19.BLIF \
+A5.BLIF A4.BLIF A3.BLIF A7.BLIF N_8.BLIF N_7.BLIF N_9.BLIF OA2.BLIF A1.BLIF
+.outputs N_8 N_19 BUSDIR CS N_9 N_10 N_11 N_7 OA2 OA1
+
+.subckt g_2and A.BLIF=A6.BLIF B.BLIF=A2.BLIF Y=N_8
+
+.subckt g_2nor A.BLIF=N_10.BLIF B.BLIF=N_11.BLIF YN=N_19
+
+.subckt g_2or A.BLIF=RD.BLIF B.BLIF=CS.BLIF Y=BUSDIR
+
+.subckt g_2or A.BLIF=IORQ.BLIF B.BLIF=N_19.BLIF Y=CS
+
+.subckt g_3and A.BLIF=A5.BLIF B.BLIF=A4.BLIF C.BLIF=A3.BLIF Y=N_9
+
+.subckt g_3and A.BLIF=A7.BLIF B.BLIF=N_8.BLIF C.BLIF=N_7.BLIF Y=N_10
+
+.subckt g_3and A.BLIF=N_9.BLIF B.BLIF=N_8.BLIF C.BLIF=OA2.BLIF Y=N_11
+
+.subckt g_3nor A.BLIF=A5.BLIF B.BLIF=A4.BLIF C.BLIF=A3.BLIF YN=N_7
+
+.subckt g_inv A.BLIF=A7.BLIF YN=OA2
+
+.subckt g_xnor A.BLIF=A1.BLIF B.BLIF=A7.BLIF YN=OA1
+.end
+
+.model g_2and
+.inputs A.BLIF B.BLIF
+.outputs Y
+.names A.BLIF B.BLIF Y
+11 1
+0- 0
+-0 0
+.end
+
+.model g_2nor
+.inputs A.BLIF B.BLIF
+.outputs YN
+.names A.BLIF B.BLIF YN
+00 1
+1- 0
+-1 0
+.end
+
+.model g_2or
+.inputs A.BLIF B.BLIF
+.outputs Y
+.names A.BLIF B.BLIF Y
+1- 1
+-1 1
+00 0
+.end
+
+.model g_3and
+.inputs A.BLIF B.BLIF C.BLIF
+.outputs Y
+.names C.BLIF B.BLIF A.BLIF Y
+111 1
+-0- 0
+0-- 0
+--0 0
+.end
+
+.model g_3nor
+.inputs A.BLIF B.BLIF C.BLIF
+.outputs YN
+.names C.BLIF B.BLIF A.BLIF YN
+000 1
+-1- 0
+1-- 0
+--1 0
+.end
+
+.model g_inv
+.inputs A.BLIF
+.outputs YN
+.names A.BLIF YN
+0 1
+1 0
+.end
+
+.model g_xnor
+.inputs A.BLIF B.BLIF
+.outputs YN
+.names A.BLIF B.BLIF YN
+00 1
+11 1
+10 0
+01 0
+.end

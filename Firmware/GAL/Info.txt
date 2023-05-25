@@ -1,0 +1,3 @@
+WozBlaster Software: Logisim - MSX-OPL.circ
+
+GAL programming software: Lattice ispLEVER Classic 1.5

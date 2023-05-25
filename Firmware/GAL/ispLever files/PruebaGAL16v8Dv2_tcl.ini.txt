@@ -1,0 +1,5 @@
+[Tcl]
+Start = Yes;
+Process = YES;
+Append = YES;
+TclFilename = PruebaGAL16v8Dv2.tcl;
