@@ -1,3 +1,6 @@
-Wozblaster V1.0 Rev.1
+Wozblaster V2.0 Rev.1
 
 Fixed:
+- Wrong text +5V / +12v that were inverted.
+- We moved 1mm towards the edge of the audio jack mass perforation.
+- Text c2/3/12 by c2/3/11.
