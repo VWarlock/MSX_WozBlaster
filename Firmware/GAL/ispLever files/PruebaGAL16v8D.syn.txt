@@ -1,0 +1,10 @@
+JDF B
+// Created by Version 1.5 
+PROJECT PruebaGAL16v8D
+DESIGN pruebagal16v8d Normal
+DEVKIT GAL16V8D-15LP
+ENTRY ABEL/Schematic
+MODULE wozblaster.sch
+MODSTYLE wozblaster Normal
+SYNTHESIS_TOOL Synplify
+TOPMODULE wozblaster

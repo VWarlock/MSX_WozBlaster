@@ -1,0 +1,56 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Thu May 17 16:14:43 2012
+#$ TITLE wozblaster.bls 
+#$ MODULE wozblaster
+#$ PINS 13 RD IORQ BUSDIR'o'  CS'o'  OA2'o'  OA1'o'  A7 A6 A5 A4 A3 A2 A1
+#$ NODES 6 N_19'o'  N_7'o'  N_8'o'  N_9'o'  N_10'o'  N_11'o' 
+
+.model wozblaster
+.inputs A6.BLIF A2.BLIF N_10.BLIF N_11.BLIF RD.BLIF CS.BLIF IORQ.BLIF N_19.BLIF \
+A5.BLIF A4.BLIF A3.BLIF A7.BLIF N_8.BLIF N_7.BLIF N_9.BLIF OA2.BLIF A1.BLIF
+.outputs N_8 N_19 BUSDIR CS N_9 N_10 N_11 N_7 OA2 OA1
+.names A6.BLIF A2.BLIF N_8
+11 1
+0- 0
+-0 0
+.names N_10.BLIF N_11.BLIF N_19
+00 1
+1- 0
+-1 0
+.names RD.BLIF CS.BLIF BUSDIR
+1- 1
+-1 1
+00 0
+.names IORQ.BLIF N_19.BLIF CS
+1- 1
+-1 1
+00 0
+.names A3.BLIF A4.BLIF A5.BLIF N_9
+111 1
+-0- 0
+0-- 0
+--0 0
+.names N_7.BLIF N_8.BLIF A7.BLIF N_10
+111 1
+-0- 0
+0-- 0
+--0 0
+.names OA2.BLIF N_8.BLIF N_9.BLIF N_11
+111 1
+-0- 0
+0-- 0
+--0 0
+.names A3.BLIF A4.BLIF A5.BLIF N_7
+000 1
+-1- 0
+1-- 0
+--1 0
+.names A7.BLIF OA2
+0 1
+1 0
+.names A1.BLIF A7.BLIF OA1
+00 1
+11 1
+10 0
+01 0
+.end

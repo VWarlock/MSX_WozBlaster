@@ -1,0 +1,25 @@
+#$ TOOL SCH2BLF 1.5.00.01 
+#$ TITLE wozblaster.bls 
+#$ MODULE wozblaster 
+#$ PINS 13  RD IORQ BUSDIR CS OA2 OA1 A7 A6 A5 A4 A3 A2 A1
+#$ NODES 6 N_19 N_7 N_8 N_9 N_10 N_11 
+#$ INTERFACE g_2and 3 A'i' B'i' Y'o'
+#$ INTERFACE g_2nor 3 A'i' B'i' YN'o'
+#$ INTERFACE g_2or 3 A'i' B'i' Y'o'
+#$ INTERFACE g_3and 4 A'i' B'i' C'i' Y'o'
+#$ INTERFACE g_3nor 4 A'i' B'i' C'i' YN'o'
+#$ INTERFACE g_inv 2 A'i' YN'o'
+#$ INTERFACE g_xnor 3 A'i' B'i' YN'o'
+#$ PRIMITIVE I10 g_2and 3 A6 A2 N_8
+#$ PRIMITIVE I9 g_2nor 3 N_10 N_11 N_19
+#$ PRIMITIVE I7 g_2or 3 RD CS BUSDIR
+#$ PRIMITIVE I8 g_2or 3 IORQ N_19 CS
+#$ PRIMITIVE I4 g_3and 4 A5 A4 A3 N_9
+#$ PRIMITIVE I5 g_3and 4 A7 N_8 N_7 N_10
+#$ PRIMITIVE I6 g_3and 4 N_9 N_8 OA2 N_11
+#$ PRIMITIVE I1 g_3nor 4 A5 A4 A3 N_7
+#$ PRIMITIVE I2 g_inv 2 A7 OA2
+#$ PRIMITIVE I3 g_xnor 3 A1 A7 OA1
+.model wozblaster
+
+.end

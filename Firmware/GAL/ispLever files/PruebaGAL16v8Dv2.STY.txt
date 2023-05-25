@@ -1,0 +1,4 @@
+[STRATEGY-LIST]
+Normal=True, 1337279279
+[synthesis-type]
+tool=Synplify

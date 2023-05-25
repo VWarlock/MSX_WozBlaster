@@ -1,0 +1,33 @@
+Capacitors:
+---------------------
+100nF ceramic	7pcs	C13, C16, C17, C19,C18,C20, C23
+4.7uF/16v	1pcs	C21
+10uF/16v	1pcs	C8
+22uF/16v	2pcs	C9, C10
+12pF ceramic	2pcs	C14, C15
+10pF ceramic	1pcs	C1
+2200pF ceramic	4pcs	C6, C7, C5, C3
+0.015uF ceramic	2pcs	C4, C11
+0.33uF ceramic	2pcs	C12, C2
+470uF/16v	1pcs	C22
+
+Resistors:
+---------------------
+1K		8pcs	R
+360ohm		2pcs	R
+100k		2pcs	R
+3.3K		1pcs	R
+
+Other:
+---------------------
+OPL4:		Yamaha YMF278B-F
+DAC:		Yamaha YAC513-M
+OpAmps:		LF347
+SRAM:		KM684000ALG
+EPROM:		27c160
+PLD:		Lattice GAL16V8D
+Cristal:	33.8688MHz
+Conn:		Jack audio stereo
+
+
+

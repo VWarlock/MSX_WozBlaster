@@ -1,0 +1,34 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Thu May 17 16:14:43 2012
+#$ TITLE wozblaster.bls 
+#$ MODULE wozblaster
+#$ PINS 13 RD IORQ BUSDIR'o'  CS'o'  OA2'o'  OA1'o'  A7 A6 A5 A4 A3 A2 A1
+
+.model wozblaster
+.inputs A6.BLIF A2.BLIF RD.BLIF CS.BLIF IORQ.BLIF A5.BLIF A4.BLIF A3.BLIF A7.BLIF \
+OA2.BLIF A1.BLIF
+.outputs BUSDIR CS OA2 OA1
+.names RD.BLIF CS.BLIF BUSDIR
+1- 1
+-1 1
+00 0
+.names A6.BLIF A2.BLIF IORQ.BLIF A5.BLIF A4.BLIF A3.BLIF A7.BLIF OA2.BLIF CS
+----01-- 1
+---1-0-- 1
+---01--- 1
+-----1-0 1
+-----00- 1
+--1----- 1
+-0------ 1
+0------- 1
+110111-1 0
+1100001- 0
+.names A7.BLIF OA2
+0 1
+1 0
+.names A1.BLIF A7.BLIF OA1
+00 1
+11 1
+10 0
+01 0
+.end
